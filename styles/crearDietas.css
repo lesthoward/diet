@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap");
+body {
+  --dark-color: #302E2E;
+  --background-color: #f2f2f2;
+  --wrapper-color: #fff;
+  --wrapper-contrast-color: #302E2E;
+  --text-color: #707070;
+  --text-contrast-color: rgba(255,255,255, .8);
+  --text-dark-color: #000;
+  --first-color: #e44343;
+  --second-color: #e44343;
+  --font-family: "Source Code Pro", sans-serif;
+  --font-size: 1.6rem;
+  --font-size-bigger: 3.4rem;
+  --font-size-big: 3.2rem;
+  --font-size-middle: 2.4rem;
+  --font-size-small: 2.2rem;
+  --font-size-smaller: 1.8rem;
+  --font-size-paragraph: 1.4rem;
+  --shadow-color-low: rgba(7, 7, 7, .1);
+  --shadow-color-middle: rgba(0, 0, 0, .3);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  font-size: 1.6rem;
+}
+
+.container {
+  max-width: 100%;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+ul, li {
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+img {
+  max-width: 100%;
+}
+
+input, button {
+  outline: none;
+}
+
+header {
+  background: var(--wrapper-contrast-color);
+  color: var(--text-contrast-color);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header > * {
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logotipo__img {
+  height: 75%;
+  margin-right: 1.5rem;
+}
+
+.logotipo__titulo {
+  color: var(--text-contrast-color);
+  font-size: var(--font-size-big);
+}
+
+.navegacion {
+  display: flex;
+  column-gap: 1.5rem;
+}
+
+.navegacion__link {
+  position: relative;
+  color: var(--text-contrast-color);
+}
+.navegacion__link::before {
+  background: var(--text-color);
+  display: block;
+  position: absolute;
+  content: "";
+  bottom: -0.6rem;
+  height: 0.3rem;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+.navegacion__link::after {
+  background: var(--first-color);
+  display: block;
+  position: absolute;
+  content: "";
+  bottom: -0.6rem;
+  height: 0.3rem;
+  width: 0;
+  transition: width 0.3s ease;
+  border-radius: 0.5rem;
+}
+.navegacion__link:hover::after {
+  width: 100%;
+}
+
+@media screen and (max-width: 568px) {
+  header {
+    flex-direction: column;
+  }
+}
+main {
+  display: flex;
+  align-items: center;
+}
+
+.formulario {
+  background: #fff;
+  width: 50rem;
+  padding: 6rem 4rem 1rem 4rem;
+  margin: 2rem auto;
+  box-shadow: 0.1rem 0.2rem 1.8rem var(--shadow-color-low);
+  border-radius: 0.5rem;
+}
+
+.formulario__envoltura {
+  display: flex;
+  flex-direction: column;
+  height: 53rem;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.formulario__pasos {
+  width: 100%;
+  transform: translateX(0%);
+  transition: transform 0.3s ease;
+}
+
+.formulario__titulo {
+  font-size: var(--font-size-big);
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.formulario__campo {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem;
+}
+
+.formulario__label {
+  font-size: var(--font-size-smaller);
+  font-weight: 300;
+  margin-bottom: 0.3rem;
+}
+
+.formulario__input {
+  border: none;
+  border: 0.1rem solid var(--shadow-color-low);
+  padding: 1rem 2rem;
+  border-radius: 0.3rem;
+}
+
+.formulario__botones {
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 1.5rem;
+  margin-right: 1rem;
+}
+
+.formulario__boton {
+  border: none;
+  background: var(--first-color);
+  color: var(--text-contrast-color);
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  border-radius: 3rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.formulario__boton:hover {
+  transform: scale(1.05);
+}
+
+.formulario__atras {
+  background: var(--second-color);
+}
+
+.formulario__boton--desactivado {
+  background: var(--text-color);
+  cursor: initial;
+}
+.formulario__boton--desactivado:hover {
+  transform: none;
+  user-select: none;
+}

@@ -1,0 +1,67 @@
+@import 'predetermindo';
+@import 'componentes';
+@import 'cabecera';
+
+.primeravista {
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+    align-items: center;
+}
+
+.primeravista {
+    text-align: center;
+}
+
+
+.ilustracion__img {
+    height: 50rem;
+}
+
+.porque__info {
+    color: var(--text-dark-color);
+    padding: 4rem;
+}
+
+.porque__titulo {
+    display: inline-block;
+    position: relative;
+    font-size: var(--font-size-bigger);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    user-select:none;
+    text-align: left;
+    @include bordeInferiorEstatico
+}
+
+.porque__parrafo {
+    font-size: var(--font-size);
+    line-height: 2;
+    text-align: center;
+}
+
+.porque__boton {
+    @include botonRedondo
+}
+
+@include laptop {
+    .ilustracion {
+        text-align: right;
+    }
+    .ilustracion__img {
+        height: 40rem;
+    }
+    .porque__parrafo {
+        font-size: var(--font-size-paragraph);
+    }
+}
+
+@include tableta {
+    .primeravista {
+        grid-template-columns: 1fr;
+        margin-bottom: 8rem;
+    }
+    .ilustracion {
+        text-align: center;
+    }
+}

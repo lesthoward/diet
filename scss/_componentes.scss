@@ -1,0 +1,88 @@
+$laptop: 1024px;
+$tableta: 768px;
+$movilMax: 568px;
+$movil: 468px;
+
+@mixin laptop {
+    @media screen and (max-width:#{$laptop}) {
+        @content;
+    }
+}
+
+@mixin tableta {
+    @media screen and (max-width:#{$tableta}) {
+        @content;
+    }
+}
+
+@mixin movilMax {
+    @media screen and (max-width:#{$movilMax}) {
+        @content;
+    }
+}
+
+@mixin movil {
+    @media screen and (max-width:#{$movil}) {
+        @content;
+    }
+}
+
+
+@mixin bordeInferior ($bordeInferior: -.6rem,) {
+    &::before {
+        background: var(--text-color);
+        display: block;
+        position: absolute;
+        content: '';
+        bottom: $bordeInferior;
+        height: .3rem;
+        width: 100%;
+        border-radius: .5rem;
+    }
+    &::after {
+        background: var(--first-color);
+        display: block;
+        position: absolute;
+        content: '';
+        bottom: $bordeInferior;
+        height: .3rem;
+        width: 0;
+        transition: width .3s ease;
+        border-radius: .5rem;
+    }
+    &:hover::after {
+        width: 100%
+    }
+}
+
+
+@mixin bordeInferiorEstatico ($bordeInferior: -.3rem,) {
+    &::after {
+        background: var(--first-color);
+        display: block;
+        position: absolute;
+        content: '';
+        bottom: $bordeInferior;
+        height: .4rem;
+        width: 6.5rem;
+        transition: width .3s ease;
+        border-radius: .5rem;
+    }
+    &:hover::after {
+        width: 100%
+    }
+}
+
+@mixin botonRedondo {
+    background: var(--first-color);
+    color: var(--text-contrast-color);
+    display:inline-block;
+    padding: 1.5rem 3rem;
+    border-radius: 3rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: transform .3s ease;
+    &:hover {
+        transform: scale(1.05);
+    }
+}

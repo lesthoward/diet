@@ -1,0 +1,43 @@
+header {
+    background: var(--wrapper-contrast-color);
+    color: var(--text-contrast-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header > * {
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logotipo__img {
+    height: 75%;
+    margin-right: 1.5rem;
+}
+
+.logotipo__titulo {
+    color: var(--text-contrast-color);
+    font-size: var(--font-size-big);
+}
+
+.navegacion {
+    display: flex;
+    column-gap: 1.5rem;
+}
+
+.navegacion__link {
+    position: relative;
+    color: var(--text-contrast-color);
+    @include bordeInferior
+}
+
+
+
+@include movilMax {
+    header {
+        flex-direction: column;
+    }
+}

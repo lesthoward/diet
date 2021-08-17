@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+
+body {
+    --dark-color: #302E2E;
+    
+    --background-color: #f2f2f2;
+    --wrapper-color: #fff;
+    --wrapper-contrast-color: #302E2E;
+
+    --text-color: #707070;
+    --text-contrast-color: rgba(255,255,255, .8);
+    --text-dark-color: #000;
+
+    --first-color: #e44343;
+    --second-color: #e44343;
+
+    --font-family: "Source Code Pro", sans-serif;
+    --font-size: 1.6rem;
+    --font-size-bigger: 3.4rem;
+    --font-size-big: 3.2rem;
+    --font-size-middle: 2.4rem;
+    --font-size-small: 2.2rem;
+    --font-size-smaller: 1.8rem;
+    --font-size-paragraph: 1.4rem;
+
+    --shadow-color-low: rgba(7, 7, 7, .1);
+    --shadow-color-middle: rgba(0, 0, 0, .3);
+ }
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: var(--background-color);
+    color:var(--text-color);
+    font-family: var(--font-family);
+    font-size: 1.6rem;
+}
+
+.container {
+    max-width: 100%;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+ul, li {
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+img {
+    max-width: 100%;
+}
+
+input, button {
+    outline: none;
+}
