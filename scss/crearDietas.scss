@@ -100,10 +100,8 @@ main {
 
 .formulario__boton--desactivado {
     background: var(--text-color);
-    cursor:initial ;
     &:hover {
         transform: none;
-        user-select: none;
     }
 }
 

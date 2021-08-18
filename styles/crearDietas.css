@@ -231,11 +231,9 @@ main {
 
 .formulario__boton--desactivado {
   background: var(--text-color);
-  cursor: initial;
 }
 .formulario__boton--desactivado:hover {
   transform: none;
-  user-select: none;
 }
 
 .caja {

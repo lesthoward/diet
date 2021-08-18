@@ -15,7 +15,7 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js'></script>
     <!-- Mis estilos y scrips -->
     <link rel="stylesheet" href="../styles/crearDietas.css">
-    <script src="../scripts/crearDieta.js" defer type="module"></script>
+    <script src="../scripts/pages/crearDieta.js" defer type="module"></script>
 </head>
 <body>
     <!-- Cabecera -->
@@ -47,33 +47,32 @@
                     </div>
                     <!-- formulario__info -->
                     <div class="formulario__campo">
-                        <label class="formulario__label">Tu nombre</label>
-                        <input class="formulario__input" type="text"></input>
+                        <label class="formulario__label" >Tu nombre</label>
+                        <input class="formulario__input" type="text" id="nombre"></input>
                     </div>
                     <!-- formulario__campo -->
                     <div class="formulario__campo">
                         <label class="formulario__label">Apellido(s)</label>
-                        <input class="formulario__input" type="text"></input>
+                        <input class="formulario__input" type="text"  id="apellidos"></input>
                     </div>
                     <!-- formulario__campo -->
                     <div class="formulario__campo">
-                        <label class="formulario__label">Edad</label>
-                        <input class="formulario__input" type="text"></input>
+                        <label class="formulario__label" >Edad</label>
+                        <input class="formulario__input" type="text" id="edad"></input>
                     </div>
                     <!-- formulario__campo -->
                     <div class="formulario__campo">
-                        <label class="formulario__label">Correo</label>
-                        <input class="formulario__input" type="text"></input>
+                        <label class="formulario__label" >Correo</label>
+                        <input class="formulario__input" type="text" id="correo"></input>
                     </div>
                     <!-- formulario__campo -->
                     <div class="formulario__campo">
-                        <label class="formulario__label">Contraseña</label>
-                        <input class="formulario__input" type="password"></input>
+                        <label class="formulario__label" >Contraseña</label>
+                        <input class="formulario__input" type="password" id="pass"></input>
                     </div>
                     <!-- formulario__campo -->
                     <div class="formulario__botones">
-                        <button class="formulario__boton formulario__atras formulario__boton--desactivado" disabled>Atrás</button>
-                        <button class="formulario__boton formulario__siguiente">Siguiente</button>
+                        <button class="formulario__boton formulario__boton--desactivado formulario__siguiente">Siguiente</button>
                     </div>
                     <!-- formulario__botones -->
                 </div>
@@ -138,7 +137,7 @@
                     
                     <div class="formulario__botones">
                         <button class="formulario__boton formulario__atras">Atrás</button>
-                        <button class="formulario__boton formulario__siguiente">Siguiente</button>
+                        <button class="formulario__boton formulario__siguiente formulario__boton--desactivado">Siguiente</button>
                     </div>
                     <!-- formulario__botones -->
                     
@@ -184,7 +183,6 @@
 
                     <div class="formulario__botones">
                         <button class="formulario__boton formulario__atras" >Atrás</button>
-                        <button class="formulario__boton formulario__siguiente">Siguiente</button>
                     </div>
                 </div>
                 <!-- ! formulario__pasos -->
@@ -222,7 +220,6 @@
 
                     <div class="formulario__botones">
                         <button class="formulario__boton formulario__atras" >Atrás</button>
-                        <button class="formulario__boton formulario__siguiente">Siguiente</button>
                     </div>
                 </div>
                 <!-- ! formulario__pasos -->
@@ -262,7 +259,6 @@
 
                     <div class="formulario__botones">
                         <button class="formulario__boton formulario__atras" >Atrás</button>
-                        <button class="formulario__boton formulario__siguiente">Siguiente</button>
                     </div>
                 </div>
                 <!-- ! formulario__pasos -->
@@ -302,7 +298,6 @@
 
                     <div class="formulario__botones">
                         <button class="formulario__boton formulario__atras" >Atrás</button>
-                        <button class="formulario__boton formulario__siguiente">Siguiente</button>
                     </div>
                 </div>
                 <!-- ! formulario__pasos -->
@@ -352,7 +347,6 @@
 
                     <div class="formulario__botones">
                         <button class="formulario__boton formulario__atras" >Atrás</button>
-                        <button class="formulario__boton formulario__siguiente">Siguiente</button>
                     </div>
                 </div>
                 <!-- ! formulario__pasos -->
@@ -428,7 +422,6 @@
 
                     <div class="formulario__botones">
                         <button class="formulario__boton formulario__atras" >Atrás</button>
-                        <button class="formulario__boton formulario__siguiente">Siguiente</button>
                     </div>
                 </div>
                 <!-- ! formulario__pasos -->
@@ -450,7 +443,7 @@
 
                     <div class="formulario__botones">
                         <button class="formulario__boton formulario__atras" >Atrás</button>
-                        <button class="formulario__boton formulario__siguiente">Enviar</button>
+                        <button class="formulario__boton formulario__siguiente formulario__enviar">Enviar</button>
                     </div>
                     <!-- formulario__botones -->
                 </div>
