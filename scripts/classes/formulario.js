@@ -1,6 +1,23 @@
+const todosFormularios = document.querySelectorAll('.formulario__pasos');
+
 class EfectosFormularios {
     constructor() {
-        this.traslado = 100
+        this.traslado = 0
+    }
+
+    trasladarSiguiente() {
+        this.traslado += -100
+        todosFormularios.forEach(cadaFormulario => {
+            cadaFormulario.style.transform = 'translate('+ this.traslado +'%)'
+        })
+    }
+
+    trasladarAtras() {
+        this.traslado += 100
+        todosFormularios.forEach(cadaFormulario => {
+            cadaFormulario.style.transform = 'translate('+ this.traslado +'%)'
+        })
+        
     }
 }
 

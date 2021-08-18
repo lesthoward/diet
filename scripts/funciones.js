@@ -1,3 +1,8 @@
+import { EfectosFormularios } from "./classes/formulario.js";
+const efectosFormularios = new EfectosFormularios
+
+
+// Los botones en los formularios lo envían por defecto, con esto quito esa acción
 const cancelarEventosBotones = () => {
     const botonesGenerales = document.querySelectorAll(':not(.formulario__enviar).formulario__boton');
     botonesGenerales.forEach(boton => {
@@ -5,6 +10,16 @@ const cancelarEventosBotones = () => {
     })
 }
 
+// La varialbe lo dice
+function comprobarCamposObjeto (objeto) {
+    const esteObj = objeto
+    return Object.values(esteObj).every((obj) => {
+        return obj !== ''
+    })
+}
+
+
 export  {
-    cancelarEventosBotones
+    cancelarEventosBotones,
+    comprobarCamposObjeto,
 }

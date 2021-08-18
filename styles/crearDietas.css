@@ -137,6 +137,10 @@ main {
   border-radius: 0.5rem;
 }
 
+.formulario__enviar {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
   .formulario {
     padding: 2.5rem;
@@ -231,6 +235,8 @@ main {
 
 .formulario__boton--desactivado {
   background: var(--text-color);
+  cursor: initial;
+  pointer-events: none;
 }
 .formulario__boton--desactivado:hover {
   transform: none;
@@ -294,7 +300,11 @@ input[type=checkbox] {
   border: 0.1rem solid;
 }
 
-.objetivo--active {
+.objetivo * {
+  pointer-events: none;
+}
+
+.objetivo:active {
   background: var(--first-color);
   color: var(--text-contrast-color);
 }
@@ -334,7 +344,11 @@ input[type=checkbox] {
   cursor: pointer;
 }
 
-.cuerpo__envoltura--active {
+.cuerpo__envoltura * {
+  pointer-events: none;
+}
+
+.cuerpo__envoltura:active {
   background: var(--first-color);
 }
 
@@ -381,11 +395,15 @@ input[type=checkbox] {
   transition: border 0.2s ease;
 }
 
+.cuadro * {
+  pointer-events: none;
+}
+
 .cuadro:hover {
   border: 0.1rem solid;
 }
 
-.cuadro--active {
+.cuadro:active {
   background: var(--first-color);
   color: var(--text-contrast-color);
 }
@@ -507,4 +525,23 @@ input[type=checkbox] {
   top: -0.9rem;
   left: 0.9rem;
   box-shadow: 0 0 0.4rem 0.3rem #fff;
+}
+
+.notificacion {
+  margin-top: 10rem;
+  width: 15rem;
+  margin: 0 auto;
+}
+
+.notificacion__link {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 900;
+  text-align: center;
+  text-decoration: underline;
+}
+
+strong {
+  color: var(--text-dark-color);
+  font-weight: bold;
 }

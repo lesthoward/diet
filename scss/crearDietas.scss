@@ -16,6 +16,10 @@ main {
     border-radius: .5rem;
 }
 
+.formulario__enviar {
+    display: none;
+}
+
 @include tableta {
     .formulario {
         padding: 2.5rem;
@@ -100,6 +104,8 @@ main {
 
 .formulario__boton--desactivado {
     background: var(--text-color);
+    cursor: initial;
+    pointer-events: none;
     &:hover {
         transform: none;
     }
@@ -162,7 +168,11 @@ input[type="checkbox"] {
 border: .1rem solid;
 }
 
-.objetivo--active {
+.objetivo * {
+    pointer-events: none;
+}
+
+.objetivo:active {
     background: var(--first-color);
     color: var(--text-contrast-color);
 }
@@ -202,7 +212,11 @@ border: .1rem solid;
     cursor: pointer;
 }
 
-.cuerpo__envoltura--active {
+.cuerpo__envoltura * {
+    pointer-events: none;
+}
+
+.cuerpo__envoltura:active {
     background: var(--first-color);
 }
 
@@ -254,11 +268,15 @@ border: .1rem solid;
     transition: border .2s ease;
 }
 
+.cuadro * {
+    pointer-events: none;
+}
+
 .cuadro:hover {
     border: .1rem solid;
 }
 
-.cuadro--active {
+.cuadro:active {
     background: var(--first-color);
     color: var(--text-contrast-color);
 }
@@ -385,7 +403,23 @@ border: .1rem solid;
     box-shadow: 0 0 .4rem .3rem #fff;
 }
 
+.notificacion {
+    margin-top: 10rem;
+    width: 15rem;
+    margin: 0 auto;
+    
+}
 
+.notificacion__link {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 900;
+    // text-transform: capitalize;
+    text-align: center;
+    text-decoration: underline;
+}
 
-
-
+strong {
+    color: var(--text-dark-color);
+    font-weight: bold;
+}
