@@ -472,7 +472,7 @@ input[type=checkbox] {
 .mensaje__textarea {
   font-weight: 300;
   flex: 1;
-  height: 12.5rem;
+  min-height: 12.5rem;
   max-height: 22.5rem;
   padding: 1.5rem 2.2rem;
   border: none;

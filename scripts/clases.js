@@ -17,11 +17,13 @@ class Formulario {
         }
         return this.pasosFormulario;
     }
+    datosPersonales(formulario) {
+        
+    }
 }
 
 class FormularioDocumento {
     trasladarFormulario(pasosFormulario) {
-        console.log(pasosFormulario);
         formularios.forEach((formulario) => {
             formulario.style.transform = `translate(${pasosFormulario}00%)`
         })

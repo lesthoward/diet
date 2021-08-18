@@ -1,61 +1,80 @@
 import {Formulario, FormularioDocumento} from '../scripts/clases.js' 
 
+// Cargar pasos de formulario manualmente
 const pasosFormularioManual = 0
 const formulariosContenedor = document.querySelector('.formulario__envoltura');
 const formulario = new Formulario(pasosFormularioManual);
 const formularioDocumento = new FormularioDocumento();
-// Cargar formulario por defecto
 formularioDocumento.trasladarFormulario(pasosFormularioManual)
 
+let pasosFormulario
 
-
-const eventosFormulario = (e) => {
+// Llamar las clases que interáctuan con los efectos del formulario
+const trasladarFormulario = (e) => {
     e.preventDefault();
     const objetivo = e.target 
     // Si el boton siguiente es presionado llama a mi clase de formulario con eventos y la formulario para pintar en el documento
     if(objetivo.classList.contains('formulario__siguiente')) {
-        const pasos = formulario.formularioSiguiente()
-        formularioDocumento.trasladarFormulario(pasos)
+        pasosFormulario = formulario.formularioSiguiente()
+        formularioDocumento.trasladarFormulario(pasosFormulario)
     }
 
     if(objetivo.classList.contains('formulario__atras')) {
-        const pasos = formulario.formularioAnterior()
-        formularioDocumento.trasladarFormulario(pasos)
+        pasosFormulario = formulario.formularioAnterior()
+        formularioDocumento.trasladarFormulario(pasosFormulario)
     }
 }
-// Efecto para trasladar el formulario
-formulariosContenedor.addEventListener('click', eventosFormulario)
+
+const usuario = {
+    id: Date.now(),
+    nombre: '',
+    apellidos: '',
+    edad: '',
+    correo: '',
+    pass: '',
+    medidasCorporales: {
+        altura: '',
+        pectoral: '',
+        biceps: '',
+        antebrazo: '',
+        cintura: '',
+        gluteos: '',
+        piernas: '',
+        hombros: '',
+        peso: ''
+    },
+    objetivo: '',
+    tipoCuerpo: '',
+    tipoTrabajo: '',
+    frecuenciaFisica: '',
+    actividadFisica: '',
+    adicciones: '',
+    consumoAgua: '',
+    mensaje: ''
+}
+// Elegir todos los diferentes formularios
+const usuarioFormulario = document.querySelectorAll('.formulario__pasos');
 
 
 
+const formulariosIndividuales = (formularioIndividual, pasos) => {
+    if(pasos === 0) {
+        formulario.datosPersonales(formularioIndividual)
+    }
+}
 
+const comprobarFormulario = () => {
+    usuarioFormulario.forEach((formulario, index) => {
+        const pasos = 0 | Math.abs(pasosFormulario) 
+        if(pasos === index) {
+            formulariosIndividuales(formulario, pasos)
+        }
+    })
+}  
+comprobarFormulario()  
 
-
-
-// personaObj = {
-//     id: Date.now(),
-//     nombre: 'Wilmer',
-//     apellido: 'Howard',
-//     pass: '123456',
-//     correo: 'wilmer@hispanoamericana.com',
-//     edad: 22,
-//     medidasCuerpo: {
-//         pecho: '',
-//         hombros: '',
-//         biceps: '',
-//         cintura: '',
-//         gluteo: '',
-//         piernas: ''
-//     },
-//     objetivo: 'ganar peso',
-//     tipoCuerpo: 'ectomorfo',
-//     tipoTrabajo: 'oficina',
-//     tipoActividades: 'correr',
-//     tipoActividadesFrecuencia: '3 veces a la semana',
-//     adiccion: 'fumar',
-//     adiccionFrecuencia: 'diario',
-//     limitacionFisica: 'Asma',
-//     consumoDiarioAgua: '1L',
-//     comentariosAdicionales: '',
-//     recomendaciones: 'Tienes que tomar más carbohidratos'
-// }
+// * Efecto para trasladar el formulario
+formulariosContenedor.addEventListener('click', (e) => {
+    trasladarFormulario(e)
+    comprobarFormulario(e)
+})
