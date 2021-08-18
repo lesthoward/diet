@@ -26,8 +26,8 @@
         </a>
 
         <nav class="navegacion">
-            <a class="navegacion__link" href="./pages/iniciarSesion.html">Iniciar Sesión</a>
-            <a class="navegacion__link" href="./pages/registro.html">Registrarse</a>
+            <a class="navegacion__link" href="./iniciarSesion.html">Iniciar Sesión</a>
+            <a class="navegacion__link" href="./crearDieta.html">Registrarse</a>
         </nav>
     </header>
 
@@ -35,8 +35,14 @@
     <main class="container">
         <form class="formulario">
             <div class="formulario__envoltura">
+
+
+                <!-- DATOS PERSONALES -->
                 <div class="formulario__pasos">
-                    <h2 class="formulario__titulo">Datos personales</h2>
+                    <div class="formulario__info">
+                        <h2 class="formulario__titulo">Datos personales</h2>
+                        <p class="formulario__descripcion">Serás contactado por un especialista</p>
+                    </div>
 
                     <div class="formulario__campo">
                         <label class="formulario__label">Tu nombre</label>
@@ -70,42 +76,371 @@
                     <!-- formulario__botones -->
                 </div>
                 <!-- formulario__pasos -->
-                <div class="formulario__pasos">
-                    <h2 class="formulario__titulo">Medidas corporales</h2>
 
-                    <div class="formulario__campo">
-                        <label class="formulario__label">Tu nombre</label>
-                        <input class="formulario__input" type="text"></input>
+
+                <!-- MEDIDAS CORPORALES -->
+                <div class="formulario__pasos">
+                    <div class="formulario__info">
+                        <h2 class="formulario__titulo">Medidas corporales (cm)</h2>
+                        <p class="formulario__descripcion">Toma apuntes de tu estado actual</p>
                     </div>
-                    <!-- formulario__campo -->
-                    <div class="formulario__campo">
-                        <label class="formulario__label">Apellido(s)</label>
-                        <input class="formulario__input" type="text"></input>
+                    <div class="caja">
+                        <div class="caja__envoltorio">
+                            <img class="caja__imagen" src="../images/cuerpo/altura.svg" alt="Imágen de cadera">
+                            <input class="caja__input" type="text" placeholder="Altura">
+                        </div>
+                        <!-- caja__envoltorio -->
+                        <div class="caja__envoltorio">
+                            <img class="caja__imagen" src="../images/cuerpo/pectorales.svg" alt="Imágen de pectorales">
+                            <input class="caja__input" type="text" placeholder="Pectoral">
+                        </div>
+                        <!-- caja__envoltorio -->
+                        <div class="caja__envoltorio">
+                            <img class="caja__imagen" src="../images/cuerpo/bicep.svg" alt="Imágen de biceps">
+                            <input class="caja__input" type="text" placeholder="Biceps">
+                        </div>
+                        <!-- caja__envoltorio -->
+                        <div class="caja__envoltorio">
+                            <img class="caja__imagen" src="../images/cuerpo/antebrazo.svg" alt="Imágen de antebrazo">
+                            <input class="caja__input" type="text" placeholder="Antebazo">
+                        </div>
+                        <!-- caja__envoltorio -->
+                        <div class="caja__envoltorio">
+                            <img class="caja__imagen" src="../images/cuerpo/cintura.svg" alt="Imágen de cintura">
+                            <input class="caja__input" type="text" placeholder="Cintura">
+                        </div>
+                        <!-- caja__envoltorio -->
+                        <div class="caja__envoltorio">
+                            <img class="caja__imagen" src="../images/cuerpo/gluteo.svg" alt="Imágen de glúteos">
+                            <input class="caja__input" type="text" placeholder="Glúteos">
+                        </div>
+                        <!-- caja__envoltorio -->
+                        <div class="caja__envoltorio">
+                            <img class="caja__imagen" src="../images/cuerpo/piernas.svg" alt="Imágen de piernas">
+                            <input class="caja__input" type="text" placeholder="Piernas">
+                        </div>
+                        <!-- caja__envoltorio -->
+                        <div class="caja__envoltorio">
+                            <img class="caja__imagen" src="../images/cuerpo/hombre.svg" alt="Imágen de hombros">
+                            <input class="caja__input" type="text" placeholder="Hombros">
+                        </div>
+                        <!-- caja__envoltorio -->
+                        <div class="caja__envoltorio">
+                            <img class="caja__imagen" src="../images/cuerpo/escala.svg" alt="Imágen de hombros">
+                            <input class="caja__input" type="text" placeholder="Peso (kg)">
+                        </div>
+                        <!-- caja__envoltorio -->
                     </div>
-                    <!-- formulario__campo -->
-                    <div class="formulario__campo">
-                        <label class="formulario__label">Edad</label>
-                        <input class="formulario__input" type="text"></input>
-                    </div>
-                    <!-- formulario__campo -->
-                    <div class="formulario__campo">
-                        <label class="formulario__label">Correo</label>
-                        <input class="formulario__input" type="text"></input>
-                    </div>
-                    <!-- formulario__campo -->
-                    <div class="formulario__campo">
-                        <label class="formulario__label">Contraseña</label>
-                        <input class="formulario__input" type="password"></input>
-                    </div>
+                    <!-- caja  -->
+                    
                     <!-- formulario__campo -->
                     <div class="formulario__botones">
                         <button class="formulario__boton formulario__atras">Atrás</button>
                         <button class="formulario__boton formulario__siguiente">Siguiente</button>
                     </div>
                     <!-- formulario__botones -->
+                    
                 </div>
                 <!-- formulario__pasos -->
-            </div>
+
+
+                <!-- LOGRA TUS METAS -->
+                <div class="formulario__pasos">
+                    <div class="formulario__info">
+                        <h2 class="formulario__titulo">Logra tus metas</h2>
+                        <p class="formulario__descripcion">Permiten dirigir los esfuerzos y la concentración hacia la consecución de nuestra meta</p>
+                    </div>
+                <div class="objetivos">
+                    <!-- objetivo -->
+                    <div class="objetivo">
+                        <img class="objetivo__img" src="../images/metas/diet.svg">
+                        <div class="objetivo__info">
+                            <h3 class="objetivo__titulo">Hábitos saludables</h3>
+                            <p class="objetivo__resumen">Di no a los caprichos en las comidas y apuesta por una dieta soludable</p>
+                        </div>
+                    </div>
+                    <!-- objetivo -->                    
+                        <div class="objetivo">
+                            <img class="objetivo__img" src="../images/metas/perder-peso.svg">
+                            <div class="objetivo__info">
+                                <h3 class="objetivo__titulo">Perder peso</h3>
+                                <p class="objetivo__resumen">Comienza a gastar calorías y quemar grasas</p>
+                            </div>
+                        </div>
+                        <!-- objetivo -->
+                        <div class="objetivo">
+                            <img class="objetivo__img" src="../images/metas/ganar-peso.svg">
+                            <div class="objetivo__info">
+                                <h3 class="objetivo__titulo">Ganar peso</h3>
+                                <p class="objetivo__resumen">Tonifica tus músculos y desarróllalos más rápido</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- objetivos -->
+
+                    <div class="formulario__botones">
+                        <button class="formulario__boton formulario__atras" >Atrás</button>
+                        <button class="formulario__boton formulario__siguiente">Siguiente</button>
+                    </div>
+                </div>
+                <!-- formulario__pasos -->
+
+                <!-- TIPO DE CUERPO -->
+                <div class="formulario__pasos">
+                    <div class="formulario__info">
+                        <h2 class="formulario__titulo">Tipo de cuerpo</h2>
+                        <p class="formulario__descripcion">Cada tipo de cuerpo tiene sus propias y específicas propiedades metabólicas</p>
+                    </div>
+                    <div class="cuerpo">
+                        <div class="cuerpo__envoltura">
+                            <div class="cuerpo__titulo">Ectomorfo</div>
+                            <div class="cuerpo__imagen">
+                                <img class="cuerpo__img" src="../images/tipoCuerpo/ectomorfo.svg"></img>
+                            </div>
+                        </div>
+                        <!-- cuerpo__envoltura -->
+                        <div class="cuerpo__envoltura">
+                            <div class="cuerpo__titulo">Mesomorfo</div>
+                            <div class="cuerpo__imagen">
+                                <img class="cuerpo__img" src="../images/tipoCuerpo/Mesomorfo.svg"></img>
+                            </div>
+                        </div>
+                        <!-- cuerpo__envoltura -->
+                        <div class="cuerpo__envoltura">
+                            <div class="cuerpo__titulo">Endomorfo</div>
+                            <div class="cuerpo__imagen">
+                                <img class="cuerpo__img" src="../images/tipoCuerpo/Endomorfo.svg"></img>
+                            </div>
+                        </div>
+                        <!-- cuerpo__envoltura -->
+                        
+                    </div>
+
+                    <div class="formulario__botones">
+                        <button class="formulario__boton formulario__atras" >Atrás</button>
+                        <button class="formulario__boton formulario__siguiente">Siguiente</button>
+                    </div>
+                </div>
+                <!-- formulario__pasos -->
+
+                <!-- RUTINA DIARIA -->
+                <div class="formulario__pasos">
+                    <div class="formulario__info">
+                        <h2 class="formulario__titulo">Rutina diaria</h2>
+                        <p class="formulario__descripcion">Para alcanzar tu objetivo necesitas un método personalizado basado en sus hábitos y costumbres</p>
+                    </div>
+                    
+                    <div class="cuadricula">
+                        <div class="cuadro">
+                            <img class="cuadro__img" src="../images/tipoTrabajo/trabajar.svg">
+                            <div class="cuadro__titulo">Oficina</div>
+                        </div>
+                        <!-- cuadro -->
+                        <div class="cuadro">
+                            <img class="cuadro__img" src="../images/tipoTrabajo/trabajador.svg">
+                            <div class="cuadro__titulo">Trabajo con actividad física</div>
+                        </div>
+                        <!-- cuadro -->
+                        <div class="cuadro">
+                            <img class="cuadro__img" src="../images/tipoTrabajo/casa.svg">
+                            <div class="cuadro__titulo">Normalmente en casa</div>
+                        </div>
+                        <!-- cuadro -->
+                        <div class="cuadro">
+                            <img class="cuadro__img" src="../images/tipoTrabajo/taxi.svg">
+                            <div class="cuadro__titulo">Servicio público</div>
+                        </div>
+                        <!-- cuadro -->
+                    </div>
+
+                    <div class="formulario__botones">
+                        <button class="formulario__boton formulario__atras" >Atrás</button>
+                        <button class="formulario__boton formulario__siguiente">Siguiente</button>
+                    </div>
+                </div>
+                <!-- formulario__pasos -->
+
+                <!-- LOGRA TUS METAS -->
+                <div class="formulario__pasos">
+                    <div class="formulario__info">
+                        <h2 class="formulario__titulo">Frecuencia física</h2>
+                        <p class="formulario__descripcion">Debe realizarse bajo ciertos parámetros para lograr efectos saludables</p>
+                    </div>
+
+                    
+                    <div class="objetivos">
+                        <div class="objetivo">
+                            <div class="objetivo__info">
+                                <h3 class="objetivo__titulo">Casi nunca</h3>
+                                <p class="objetivo__resumen">Pocas veces tienes tiempo o gusto para salir a ejecitarse</p>
+                            </div>
+                        </div>
+                        <!-- objetivo -->
+                        <div class="objetivo">
+                            <div class="objetivo__info">
+                                <h3 class="objetivo__titulo">Algunas veces</h3>
+                                <p class="objetivo__resumen">Cumples una rutina que realizas de 2 a 3 veces por semana</p>
+                            </div>
+                        </div>
+                        <!-- objetivo -->
+                        <div class="objetivo">
+                            <div class="objetivo__info">
+                                <h3 class="objetivo__titulo">Constantemente</h3>
+                                <p class="objetivo__resumen">Tus ejecicios son frecuentes y más de 3 veces a la semana</p>
+                            </div>
+                        </div>
+                        <!-- objetivo -->
+                    </div>
+                        <!-- objetivos -->
+
+                    <div class="formulario__botones">
+                        <button class="formulario__boton formulario__atras" >Atrás</button>
+                        <button class="formulario__boton formulario__siguiente">Siguiente</button>
+                    </div>
+                </div>
+                <!-- formulario__pasos -->
+
+
+                <!-- ACTIVIDAD FÍSICA -->
+                <div class="formulario__pasos">
+                    <div class="formulario__info">
+                        <h2 class="formulario__titulo">Actividad física</h2>
+                        <p class="formulario__descripcion">Una dieta bien planificada te ayudará a recuperarte más rápidamente, reduciendo tu riesgo de lesionarte</p>
+                    </div>
+                    
+                    <div class="cuadricula cuadricula__tres">
+                        <div class="cuadro">
+                            <img class="cuadro__img" src="../images/actividadFisica/pesas.svg">
+                            <div class="cuadro__titulo">Gimnasio</div>
+                        </div>
+                        <!-- cuadro -->
+                        <div class="cuadro">
+                            <img class="cuadro__img" src="../images/actividadFisica/correr.svg">
+                            <div class="cuadro__titulo">Correr</div>
+                        </div>
+                        <!-- cuadro -->
+                        <div class="cuadro">
+                            <img class="cuadro__img" src="../images/actividadFisica/bicicleta.svg">
+                            <div class="cuadro__titulo">Bicicelta</div>
+                        </div>
+                        <!-- cuadro -->
+                        <div class="cuadro">
+                            <img class="cuadro__img" src="../images/actividadFisica/natacion.svg">
+                            <div class="cuadro__titulo">Natación</div>
+                        </div>
+                        <!-- cuadro -->
+                        <div class="cuadro">
+                            <img class="cuadro__img" src="../images/actividadFisica/jugadores-de-futbol.svg">
+                            <div class="cuadro__titulo">Futbol</div>
+                        </div>
+                        <!-- cuadro -->
+                        <div class="cuadro">
+                            <img class="cuadro__img" src="../images/actividadFisica/cancelado.svg">
+                            <div class="cuadro__titulo">Ninguno(a)</div>
+                        </div>
+                        <!-- cuadro -->
+                    </div>
+
+                    <div class="formulario__botones">
+                        <button class="formulario__boton formulario__atras" >Atrás</button>
+                        <button class="formulario__boton formulario__siguiente">Siguiente</button>
+                    </div>
+                </div>
+                <!-- formulario__pasos -->
+                
+                 <!-- ADICCIONES -->
+                 <div class="formulario__pasos">
+                    <div class="formulario__info">
+                        <h2 class="formulario__titulo">Adicciones</h2>
+                        <p class="formulario__descripcion">Las personas adictas a menudo tienen uno o más problemas de salud relacionados con las drogas, que pueden incluir enfermedades pulmonares o cardíacas, embolia, cáncer o problemas de salud mental</p>
+                    </div>
+                        
+                    <div class="completaciones">
+                        <div class="completar">
+                            <div class="completar__campos">
+                                <div class="completar__titulo">Menciona si tienes alguna adicción. (opcional)</div>
+                                <input class="completar__input" type="text">
+                            </div>
+                            <div class="completar__images">
+                                <img class="completar__img" src="../images/no-fumar.svg" >
+                            </div>
+                        </div>
+                        <!-- completar -->
+                    </div>
+
+                    <div class="formulario__botones">
+                        <button class="formulario__boton formulario__atras" >Atrás</button>
+                        <button class="formulario__boton formulario__siguiente">Siguiente</button>
+                    </div>
+                </div>
+                <!-- formulario__pasos -->
+
+
+                <!-- CONSUMO DE AGUA -->
+                <div class="formulario__pasos">
+                    <div class="formulario__info">
+                        <h2 class="formulario__titulo">Consumo de agua</h2>
+                        <p class="formulario__descripcion">El agua ayuda a mantener la temperatura de tu cuerpo normal, digerir los alimentos y para eliminar los productos de desecho</p>
+                    </div>
+                    <div class="objetivos objetivos__agua">
+                        <!-- objetivo -->
+                        <div class="objetivo">
+                            <img class="objetivo__img" src="../images/consumoAgua/taza-de-cafe.svg">
+                            <div class="objetivo__info">
+                                <h3 class="objetivo__titulo">Solo café o té</h3>
+                            </div>
+                        </div>
+                        <!-- objetivo -->                    
+                        <div class="objetivo">
+                            <img class="objetivo__img" src="../images/consumoAgua/poco.svg">
+                            <div class="objetivo__info">
+                                <h3 class="objetivo__titulo">Menos de 2 vasos (0.5L)</h3>
+                            </div>
+                        </div>
+                        <!-- objetivo -->
+                        <div class="objetivo">
+                            <img class="objetivo__img" src="../images/consumoAgua/medio.svg">
+                            <div class="objetivo__info">
+                                <h3 class="objetivo__titulo">2-6 vasos (0.5 - 1.5L)</h3>
+                            </div>
+                        </div>
+                        <!-- objetivo -->
+                        <div class="objetivo">
+                            <img class="objetivo__img" src="../images/consumoAgua/abundante.svg">
+                            <div class="objetivo__info">
+                                <h3 class="objetivo__titulo">Más de 6 vasos</h3>
+                            </div>
+                        </div>
+                        <!-- objetivo -->
+                    </div>
+                    <!-- objetivos -->
+
+                    <div class="formulario__botones">
+                        <button class="formulario__boton formulario__atras" >Atrás</button>
+                        <button class="formulario__boton formulario__siguiente">Siguiente</button>
+                    </div>
+                </div>
+                <!-- formulario__pasos -->
+
+
+                <!-- CONSUMO DE AGUA -->
+                <div class="formulario__pasos">
+                    <div class="formulario__info">
+                        <h2 class="formulario__titulo">Mensaje adicional</h2>
+                        <p class="formulario__descripcion">Te dejamos este espacio para que nos brindes cualquier otro tipo de información que sea últil para nuestros especialista</p>
+                    </div>
+                    
+                    <div class="mensaje">
+                        <textarea class="mensaje__textarea" id="areaTexto" placeholder=""></textarea>
+                        <label class="mensaje__label" for="areaTexto">Escribiendo...</label>
+                    </div>
+
+                    <div class="formulario__botones">
+                        <button class="formulario__boton formulario__atras" >Atrás</button>
+                        <button class="formulario__boton formulario__siguiente">Enviar</button>
+                    </div>
+                </div>
+                <!-- formulario__pasos -->            </div>
             <!-- formulario__envoltura -->
         </form>
         <!-- formulario -->

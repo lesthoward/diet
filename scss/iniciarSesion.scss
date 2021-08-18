@@ -1,0 +1,120 @@
+@import 'predetermindo';
+@import 'componentes';
+@import 'cabecera';
+
+main {
+    display: flex;
+    align-items: center;
+}
+
+.formulario {
+    background: #fff;
+    width: 50rem;
+    padding: 6rem 4rem 1rem 4rem;
+    margin: 2rem auto;
+    box-shadow: .1rem .2rem 1.8rem var(--shadow-color-low);
+    border-radius: .5rem;
+}
+
+@include tableta {
+    .formulario {
+        padding: 2.5rem;
+    }
+}
+
+.formulario__envoltura {
+    display: flex;
+    flex-direction: column;
+    height: 47rem;
+    flex-wrap: wrap;
+    overflow: hidden;
+    overflow-y: auto;
+}
+@include movil {
+    .formulario__envoltura {
+        height: 56.5rem;
+    }
+}
+
+.formulario__pasos {
+    max-width: 100%;
+    width: 100%;
+    transform: translateX(0%);
+    transition: transform 0.3s ease;
+}
+
+.formulario__pasos > * {
+    margin: 0 0.1rem;
+}
+
+.formulario__titulo {
+    font-size: var(--font-size-big);
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.formulario__campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.formulario__campo:nth-last-of-type() {
+    margin-bottom: 0;
+}
+
+.formulario__label {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: .3rem;
+}
+.formulario__input {
+    border: none;
+    border: .1rem solid var(--shadow-color-low);
+    padding: 1.4rem 2rem;
+    border-radius: .4rem;
+    max-width: 100%;
+    transition: all .3s ease
+}
+
+.formulario__input:focus {
+    border-color: #000
+}
+
+.formulario__botones {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 1.5rem;
+    margin-right: .5rem;
+    margin-top: 1.5rem;
+}
+
+.formulario__boton {
+    border: none;
+    @include botonRedondo;
+}
+
+.formulario__atras {
+    background: var(--second-color);
+}
+
+.formulario__boton--desactivado {
+    background: var(--text-color);
+    cursor:initial ;
+    &:hover {
+        transform: none;
+        user-select: none;
+    }
+}
+
+.formulario__info {
+    .formulario__titulo {
+        margin: 0;
+    }
+}
+
+.formulario__descripcion {
+        line-height: 1.5;
+        font-weight: 300;
+        margin-bottom: 2rem;
+}

@@ -1,7 +1,7 @@
 const formularios = document.querySelectorAll('.formulario__pasos');
 class Formulario {
-    constructor() {
-        this.pasosFormulario = 0
+    constructor(pasosFormulario) {
+        this.pasosFormulario = pasosFormulario | 0
     }
     formularioSiguiente() {
         // Math para formatear el número negativo, y luego delimitar el traslado de lo formularios con los estilos css.

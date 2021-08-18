@@ -1,13 +1,14 @@
 import {Formulario, FormularioDocumento} from '../scripts/clases.js' 
 
+const pasosFormularioManual = 0
 const formulariosContenedor = document.querySelector('.formulario__envoltura');
-const formulario = new Formulario();
+const formulario = new Formulario(pasosFormularioManual);
 const formularioDocumento = new FormularioDocumento();
 // Cargar formulario por defecto
-formularioDocumento.trasladarFormulario(-1)
+formularioDocumento.trasladarFormulario(pasosFormularioManual)
 
 
-// Efecto para trasladar el formulario
+
 const eventosFormulario = (e) => {
     e.preventDefault();
     const objetivo = e.target 
@@ -22,8 +23,12 @@ const eventosFormulario = (e) => {
         formularioDocumento.trasladarFormulario(pasos)
     }
 }
-
+// Efecto para trasladar el formulario
 formulariosContenedor.addEventListener('click', eventosFormulario)
+
+
+
+
 
 
 

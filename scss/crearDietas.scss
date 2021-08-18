@@ -16,18 +16,35 @@ main {
     border-radius: .5rem;
 }
 
+@include tableta {
+    .formulario {
+        padding: 2.5rem;
+    }
+}
+
 .formulario__envoltura {
     display: flex;
     flex-direction: column;
-    height: 53rem;
+    height: 47rem;
     flex-wrap: wrap;
     overflow: hidden;
+    overflow-y: auto;
+}
+@include movilMax {
+    .formulario__envoltura {
+        height: 56.5rem;
+    }
 }
 
 .formulario__pasos {
+    max-width: 100%;
     width: 100%;
     transform: translateX(0%);
     transition: transform 0.3s ease;
+}
+
+.formulario__pasos > * {
+    margin: 0 0.1rem;
 }
 
 .formulario__titulo {
@@ -39,26 +56,37 @@ main {
 .formulario__campo {
     display: flex;
     flex-direction: column;
-    margin: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.formulario__campo:nth-last-of-type() {
+    margin-bottom: 0;
 }
 
 .formulario__label {
-    font-size: var(--font-size-smaller);
+    font-size: 1.4rem;
     font-weight: 300;
     margin-bottom: .3rem;
 }
 .formulario__input {
     border: none;
     border: .1rem solid var(--shadow-color-low);
-    padding: 1rem 2rem;
-    border-radius: .3rem;
+    padding: .8rem 2rem;
+    border-radius: .4rem;
+    max-width: 100%;
+    transition: all .3s ease
+}
+
+.formulario__input:focus {
+    border-color: #000
 }
 
 .formulario__botones {
     display: flex;
     justify-content: flex-end;
     column-gap: 1.5rem;
-    margin-right: 1rem;
+    margin-right: .5rem;
+    margin-top: 1.5rem;
 }
 
 .formulario__boton {
@@ -78,4 +106,288 @@ main {
         user-select: none;
     }
 }
+
+.caja {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+    gap: 2.5rem;
+}
+
+.caja__envoltorio {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+    font-size: 1.2rem;
+}
+
+.caja__imagen {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.caja__input {
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+    border: none;
+    border-bottom: .15rem solid var(--shadow-color-middle);
+    padding-bottom: .6rem;
+    margin: .5rem;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    z-index: 1015;
+    width: 100%;
+    top: 50%;
+    pointer-events: all;
+}
+
+.objetivos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+
+.objetivo {
+    background: rgba(0, 0, 0, .05);
+    display: flex;
+    align-items: center;
+    padding: 1.3rem;
+    border-radius:  .5rem;
+    cursor: pointer;
+    border: .1rem solid transparent;
+    transition: border .2s ease;
+}    
+.objetivo:hover {
+border: .1rem solid;
+}
+
+.objetivo--active {
+    background: var(--first-color);
+    color: var(--text-contrast-color);
+}
+
+.objetivo__img {
+    vertical-align: bottom;
+    width: 4rem;
+    padding: .5rem;
+}
+.objetivo__info {
+    padding: 0 1rem;
+    font-size: var(--font-size-paragraph)
+}
+
+.objetivo__titulo {
+    text-transform: capitalize;
+}
+
+.objetivo__resumen {
+    line-height: 1.5;
+}
+
+
+.cuerpo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+    gap: 1.5rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.cuerpo__envoltura {
+    background: var(--wrapper-contrast-color);
+    color: var(--text-contrast-color);
+    border-radius: .5rem;
+    padding: 1.5rem 0;
+    cursor: pointer;
+}
+
+.cuerpo__envoltura--active {
+    background: var(--first-color);
+}
+
+.cuerpo__titulo {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+.cuerpo__imagen {
+    padding: 1.5rem;
+    height: 20rem;
+}
+
+.cuerpo__img {
+    height: 20rem;
+}
+
+.formulario__info {
+    .formulario__titulo {
+        margin: 0;
+    }
+}
+
+.formulario__descripcion {
+        line-height: 1.5;
+        font-weight: 300;
+        margin-bottom: 2rem;
+}
+
+.formulario__pasos:first-of-type {
+    .formulario__descripcion {
+        margin-bottom: 1rem;
+    }
+}
+
+.cuadricula {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    
+}
+
+.cuadro {
+    background: rgba(0, 0, 0, .05);
+    border-radius:.5rem;
+    text-align: center;
+    padding: 1.5rem 0;
+    border: .1rem solid transparent;
+    transition: border .2s ease;
+}
+
+.cuadro:hover {
+    border: .1rem solid;
+}
+
+.cuadro--active {
+    background: var(--first-color);
+    color: var(--text-contrast-color);
+}
+
+.cuadro__img {
+    width: 6rem;
+    margin-bottom: .5rem;
+}
+
+
+.cuadro__titulo {
+    font-size: 1.4rem;
+    letter-spacing: .3rem;
+    padding:  0  1rem;
+    user-select: none;
+}
+
+.cuadricula__tres {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@include movil {
+    .cuadricula__tres {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+        .cuadro {
+            width: 10rem;
+            .cuadro__img {
+                width: 4rem;
+            }
+    
+            .cuadro__titulo {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+.completar {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+.completar__titulo {
+    color: var(--text-dark-color);
+    font-weight: bold;;
+}
+
+.completar__input {
+    color: var(--text-color);
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+    border: none;
+    border-bottom: .2rem solid var(--shadow-color-middle);
+    padding-bottom: .6rem;
+    margin: .5rem;
+    text-transform: capitalize;
+}
+
+.completar__img {
+    width: 10rem;
+    filter: grayscale(1);
+    transition: all .2s ease;
+}
+
+.completar__img:hover {
+    filter: grayscale(0)
+}
+
+.objetivos__agua {
+    row-gap: 1rem;
+    .objetivo {
+        padding: 0.3rem;
+    }
+}
+
+.mensaje {
+    display: flex;
+    position: relative;
+}
+
+.mensaje__textarea {
+    font-weight: 300;
+    flex: 1;
+    height: 12.5rem;
+    max-height: 22.5rem;
+    padding: 1.5rem 2.2rem;
+    border: none;
+    border: .2rem solid var(--shadow-color-low);
+    border-radius: .4rem;
+    transition: border .2s ease;
+    outline: none;
+}
+
+.mensaje__label {
+    color: var(--shadow-color-middle);
+    position: absolute;
+    top: 1rem;
+    left: 2.5rem;
+    transition: all .2s ease;
+    user-select: none;
+}
+
+.mensaje__textarea:focus + .mensaje__label{
+    background: #fff;
+    color: #000;
+    padding: 0 1rem;
+    font-size: 1.4rem;
+    top: -.9rem;
+    left: .9rem;
+    box-shadow: 0 0 .4rem .3rem #fff;
+}
+
+.mensaje__textarea:not(:placeholder-shown) + .mensaje__label{
+    background: #fff;
+    color: #000;
+    padding: 0 1rem;
+    font-size: 1.4rem;
+    top: -.9rem;
+    left: .9rem;
+    box-shadow: 0 0 .4rem .3rem #fff;
+}
+
+
+
+
 
