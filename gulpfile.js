@@ -13,7 +13,7 @@ function crearEstilos () {
 
 function sincronizarServidor () {
     browserSync.init({
-        port: 3050,
+        port: 3000,
         server: {
             baseDir: './'
         },

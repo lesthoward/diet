@@ -3,16 +3,17 @@
 @import 'cabecera';
 
 .envoltura {
-    display: none;
+    display: block;
     background: var(--wrapper-color);
     max-width: 80rem;
     margin: 2.5rem auto;
     padding: 4rem 3rem;
     box-shadow: .2rem .1rem 1.2rem var(--shadow-color-low);
+    justify-content: center;
 }
 
 .envoltura__nutricionista {
-    display: block;
+    display: none;
 }
 
 .envoltura__titulo {
@@ -24,8 +25,8 @@
 .envoltura__contenedor {
     display: flex;
     flex-wrap: wrap;
-    flex: 1;
     gap: 1.5rem;
+    justify-content: center;
 }
 
 @include laptop {

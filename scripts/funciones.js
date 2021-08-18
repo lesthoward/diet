@@ -4,9 +4,10 @@ const efectosFormularios = new EfectosFormularios
 
 // Los botones en los formularios lo envían por defecto, con esto quito esa acción
 const cancelarEventosBotones = () => {
-    const botonesGenerales = document.querySelectorAll(':not(.formulario__enviar).formulario__boton');
+    const botonesGenerales = document.querySelectorAll('.formulario__boton');
     botonesGenerales.forEach(boton => {
         boton.addEventListener('click', (e) => e.preventDefault())
+
     })
 }
 

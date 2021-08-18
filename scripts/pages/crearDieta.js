@@ -1,5 +1,10 @@
 import * as ejecutar from '../funciones.js'
 import {EfectosFormularios, CamposFormularios} from '../classes/formulario.js'
+import { enviarUsuariosJSON } from '../api.js'
+
+// Intancias de las dos clases de efectos y campos
+const efectosFormularios = new EfectosFormularios()
+const camposFormularios = new CamposFormularios()
 
 const EscucharEventos = () => {
     // Con este método cancelo la ejecución del programa al presionar los eventos, exeptuando el de "submit"; en caso de enviar formulario a la base de datos.
@@ -8,7 +13,7 @@ const EscucharEventos = () => {
 EscucharEventos ()
 
 // Objeto de los detalles del usuario
-const usuario = {
+let usuario = {
     id: Date.now(),
     nombre: '',
     apellidos: '',
@@ -38,10 +43,6 @@ const usuario = {
 // ! Traslado de formulario manual, solo en desarrollo.
 let pasosFormularios = 0
 const todosFormularios = document.querySelectorAll('.formulario__pasos');
-
-// Intancias de las dos clases de efectos y campos
-const efectosFormularios = new EfectosFormularios()
-const camposFormularios = new CamposFormularios()
 
 // ! Traslado de formulario manual, solo en desarrollo.
 // efectosFormularios.trasladarSiguiente()
@@ -111,12 +112,14 @@ function funcionalidadSiguiente (btnContinuar=true) {
     
 }
 
-function enviarFormulario () {
+async function enviarFormulario () {
+    await enviarUsuariosJSON(usuario)
     document.querySelector('.formulario__envoltura').innerHTML = `
     <div class="formulario__pasos formulario__enviar">
         <div class="formulario__info">
             <h2 class="formulario__titulo">GRACIAS POR ELEGIRNOS.</h2>
-            <p class="formulario__descripcion">Uno de nuestros asesores nutricionistas revisará tu caso y te guiará en tu progreso de <strong>${usuario.objetivo}</strong> y cumplas con tus objetivos</p>
+            <p class="formulario__descripcion">Uno de nuestros asesores nutricionistas revisará tu caso y te guiará en tu progreso de <strong>${usuario.objetivo}</strong> para que cumplas con tus objetivos</p>
+            <p>Notificaremos en tu correo : <strong>${usuario.correo}</strong></p>
         </div>
 
         <div class="notificacion">
@@ -130,10 +133,10 @@ function enviarFormulario () {
 }
 
 function mensajeAdicionalFormulario (formularioUnico) {
-    let btnEnviar = formularioUnico.querySelector('.formulario__enviar')
+    const btnEnviar = formularioUnico.querySelector('.formulario__enviar')
     formularioUnico.addEventListener('input',(e) => {
         if(e.target.classList.contains('mensaje__textarea')) {
-            const tituloObjetivo = e.target.value.textContent.toLowerCase()
+            const tituloObjetivo = e.target.value.toLowerCase()
             usuario.mensajeAdicional = tituloObjetivo
         }
     })
@@ -142,17 +145,20 @@ function mensajeAdicionalFormulario (formularioUnico) {
         efectosFormularios.trasladarAtras()
     })
 
-    btnEnviar.addEventListener('click', () => {
-        enviarFormulario()
+    btnEnviar.addEventListener('click', (e) => {
+        e.preventDefault()
     })
 }
 
 function consumoAguaFormulario (formularioUnico) {
+    camposFormularios.corregirTabError(formularioUnico)
+
     formularioUnico.addEventListener('click',(e) => {
         if(e.target.classList.contains('objetivo')) {
             const tituloObjetivo = e.target.querySelector('.objetivo__titulo').textContent.toLowerCase()
             usuario.consumoAgua = tituloObjetivo
             funcionalidadSiguiente(true)
+            enviarFormulario()
         }
     })
     const btnAtras = formularioUnico.querySelector('.formulario__atras');
@@ -163,6 +169,8 @@ function consumoAguaFormulario (formularioUnico) {
 
 
 function adiccionesFormulario (formularioUnico) {
+    camposFormularios.corregirTabError(formularioUnico)
+
     formularioUnico.addEventListener('input',(e) => {
         if(e.target.classList.contains('completar__input')) {
             const tituloObjetivo = e.target.value.toLowerCase()
@@ -182,6 +190,8 @@ function adiccionesFormulario (formularioUnico) {
 }
 
 function actividadFisicaFormulario (formularioUnico) {
+    camposFormularios.corregirTabError(formularioUnico)
+
     formularioUnico.addEventListener('click',(e) => {
         if(e.target.classList.contains('cuadro')) {
             const tituloObjetivo = e.target.querySelector('.cuadro__titulo').textContent.toLowerCase()
@@ -196,6 +206,8 @@ function actividadFisicaFormulario (formularioUnico) {
 }
 
 function frecuenciaFisicaFormulario (formularioUnico) {
+    camposFormularios.corregirTabError(formularioUnico)
+
     formularioUnico.addEventListener('click',(e) => {
         if(e.target.classList.contains('objetivo')) {
             const tituloObjetivo = e.target.querySelector('.objetivo__titulo').textContent.toLowerCase()
@@ -210,6 +222,8 @@ function frecuenciaFisicaFormulario (formularioUnico) {
 }
 
 function tipoTrabajoFormulario (formularioUnico) {
+    camposFormularios.corregirTabError(formularioUnico)
+
     formularioUnico.addEventListener('click',(e) => {
         if(e.target.classList.contains('cuadro')) {
             const tituloObjetivo = e.target.querySelector('.cuadro__titulo').textContent.toLowerCase()
@@ -224,6 +238,8 @@ function tipoTrabajoFormulario (formularioUnico) {
 }
 
 function tipoCuerpoFormulario (formularioUnico ) {
+    camposFormularios.corregirTabError(formularioUnico)
+
     formularioUnico.addEventListener('click',(e) => {
         if(e.target.classList.contains('cuerpo__envoltura')) {
             const tituloObjetivo = e.target.querySelector('.cuerpo__titulo').textContent.toLowerCase()
@@ -239,6 +255,8 @@ function tipoCuerpoFormulario (formularioUnico ) {
 
 
 function objetivosFisicosFormulario (formularioUnico) {
+    camposFormularios.corregirTabError(formularioUnico)
+
     formularioUnico.addEventListener('click',(e) => {
         if(e.target.classList.contains('objetivo')) {
             e.target.classList.add('objetivo--active')
@@ -255,6 +273,8 @@ function objetivosFisicosFormulario (formularioUnico) {
 
 
 function medidasCorporalesFormulario (formularioUnico) {
+    camposFormularios.corregirTabError(formularioUnico)
+
     const btnSiguiente = formularioUnico.querySelector('.formulario__siguiente')
     const btnAtras = formularioUnico.querySelector('.formulario__atras');
     let btnContinuar;
@@ -283,6 +303,8 @@ function medidasCorporalesFormulario (formularioUnico) {
 
 
 function datosPersonalesFormulario (formularioUnico) {
+    camposFormularios.corregirTabError(formularioUnico)
+
     const btnSiguiente = formularioUnico.querySelector('.formulario__siguiente')
     let btnContinuar;
     formularioUnico.addEventListener('input',(e) => {
