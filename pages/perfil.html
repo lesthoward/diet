@@ -14,8 +14,8 @@
     <!-- Animaciones con JavaScript -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js'></script>
     <!-- Mis estilos y scrips -->
-    <link rel="stylesheet" href="../styles/administrarDietas.css">
-    <script src="../scripts/administrarDietas.js" defer type="module"></script>
+    <link rel="stylesheet" href="../styles/perfil.css">
+    <script src="../scripts/pages/perfil.js" defer type="module"></script>
 </head>
 <body>
     <!-- Cabecera -->
@@ -34,83 +34,79 @@
             <!-- * Perfil -->
             <div class="envoltura envoltura__nutricionista">
                 <div class="envoltura__superior">
-                    <h2 class="envoltura__titulo">Bienvenido de nuevo: <small class="envoltura__persona">sin respuesta</small></h2>
+                    <h2 class="envoltura__titulo">Estás respondiendo a: <small class="envoltura__persona" id="nombre">sin respuesta</small></h2>
                 </div>
                 <div class="columna">
                     <div class="usuario__parrafos">
                         <p class="usuario__parrafo">Correo: 
-                            <small class="usuario__datos">sin respuesta</small>
+                            <small class="usuario__datos" id="correo">sin respuesta</small>
                         </p>
                         <!-- usuario__parrafo -->
                         <p class="usuario__parrafo">Objetivo: 
-                            <small class="usuario__datos">sin respuesta</small>
+                            <small class="usuario__datos" id="objetivo">sin respuesta</small>
                         </p>
                         <!-- usuario__parrafo -->
                         <ul class="usuario__parrafo">Medidas del cuerpo (cm): 
                             <li class="usuario__datos">Altura:
-                                <small class="usuario__datos--detalle">00</small>
+                                <small class="usuario__datos--detalle" id="altura">00</small>
                             </li>
                             <!-- usuario__datos -->
                             <li class="usuario__datos">Pectoral:
-                                <small class="usuario__datos--detalle">00</small>
+                                <small class="usuario__datos--detalle" id="pectoral">00</small>
                             </li>
                             <!-- usuario__datos -->
-                            <li class="usuario__datos">Biceps:
-                                <small class="usuario__datos--detalle">00</small>
+                            <li class="usuario__datos" >Biceps:
+                                <small class="usuario__datos--detalle" id="biceps">00</small>
                             </li>
                             <!-- usuario__datos -->
-                            <li class="usuario__datos">Antebrazo:
-                                <small class="usuario__datos--detalle">00</small>
+                            <li class="usuario__datos" >Antebrazo:
+                                <small class="usuario__datos--detalle" id="antebrazo">00</small>
                             </li>
                             <!-- usuario__datos -->
-                            <li class="usuario__datos">Cintura:
-                                <small class="usuario__datos--detalle">00</small>
+                            <li class="usuario__datos" >Cintura:
+                                <small class="usuario__datos--detalle" id="cintura">00</small>
                             </li>
                             <!-- usuario__datos -->
-                            <li class="usuario__datos">Glúteos:
-                                <small class="usuario__datos--detalle">00</small>
+                            <li class="usuario__datos" >Glúteos:
+                                <small class="usuario__datos--detalle" id="gluteos">00</small>
                             </li>
                             <!-- usuario__datos -->
-                            <li class="usuario__datos">Piernas:
-                                <small class="usuario__datos--detalle">00</small>
+                            <li class="usuario__datos" >Piernas:
+                                <small class="usuario__datos--detalle" id="piernas">00</small>
                             </li>
                             <!-- usuario__datos -->
-                            <li class="usuario__datos">Hombros:
-                                <small class="usuario__datos--detalle">00</small>
+                            <li class="usuario__datos" >Hombros:
+                                <small class="usuario__datos--detalle" id="hombros">00</small>
                             </li>
                             <!-- usuario__datos -->
-                            <li class="usuario__datos">Peso (kg):
-                                <small class="usuario__datos--detalle">00</small>
+                            <li class="usuario__datos" >Peso (kg):
+                                <small class="usuario__datos--detalle" id="peso">00</small>
                             </li>
                             <!-- usuario__datos -->
                         </ul>
                         <!-- usuario__parrafo -->
-                        <p class="usuario__parrafo">Objetivo: 
-                            <small class="usuario__datos">sin respuesta</small>
-                        </p>
-                        <!-- usuario__parrafo -->
                         <p class="usuario__parrafo">Tipo de cuerpo: 
-                            <small class="usuario__datos">sin respuesta</small>
+                            <small class="usuario__datos" id="tipoCuerpo">sin respuesta</small>
                         </p>
                         <!-- usuario__parrafo -->
                         <p class="usuario__parrafo">Tipo de trabajo: 
-                            <small class="usuario__datos">sin respuesta</small>
+                            <small class="usuario__datos" id="tipoTrabajo">sin respuesta</small>
                         </p>
                         <!-- usuario__parrafo -->
                         <p class="usuario__parrafo">Frecuencia física: 
-                            <small class="usuario__datos">sin respuesta</small>
+                            <small class="usuario__datos" id="frecuenciaFisica">sin respuesta</small>
                         </p>
                         <!-- usuario__parrafo -->
                         <p class="usuario__parrafo">Adicciones: 
-                            <small class="usuario__datos">sin respuesta</small>
+                            <small class="usuario__datos" id="adiccion">sin respuesta</small>
                         </p>
                         <!-- usuario__parrafo -->
                         <p class="usuario__parrafo">Consumo de agua: 
-                            <small class="usuario__datos">sin respuesta</small>
+                            <small class="usuario__datos" id="consumoAgua">sin respuesta</small>
                         </p>
                         <!-- usuario__parrafo -->
                         <p class="usuario__parrafo">Mensaje adicional: 
-                            <small class="usuario__datos">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati tempore harum neque architecto nisi sed corrupti accusantium nobis a fuga qui quisquam at laudantium amet molestias, magni libero, ab aperiam?</small>
+                            <small class="usuario__datos" id="mensajeAdicional">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati tempore harum neque architecto nisi sed corrupti accusantium nobis a fuga qui quisquam at laudantium amet molestias, magni libero, ab aperiam?</small>
                         </p>
                         <!-- usuario__parrafo -->
                     </div>

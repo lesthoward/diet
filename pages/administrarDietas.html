@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de usuarios | NutroDietas</title>
+    <!-- Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Formatear estilos -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css'/>
     <!-- Fuentes personalizadas de iconos -->
@@ -37,122 +39,7 @@
                 <h2 class="envoltura__titulo">Lista de usuarios</h2>
             </div>
             <div class="envoltura__contenedor">
-                <!-- * Usuario -->
-                <div class="usuario">
-                    <div class="usuario__info">
-                        <div class="usuario__encabezado">
-                            <h3 class="usuario__nombre">Lester Howard Abarca</h3>
-                        </div>
-                        <!-- usuario__superior -->
-                        <div class="usuario__parrafos">
-                            <p class="usuario__parrafo">Correo: 
-                                <small class="usuario__datos">lesthoward@gmail.com</small>
-                            </p>
-                            <p class="usuario__parrafo">Objetivo: 
-                                <small class="usuario__datos">ganar peso</small>
-                            </p>
-                            <p class="usuario__parrafo">Estado respuesta: 
-                                <small class="usuario__datos">sin respuesta</small>
-                            </p>
-                        </div>
-                        <!-- usuario__parrafos -->
-                    </div>
-                    <!-- usuario__info -->
-                    
-                    <div class="usuario__acciones">
-                        <button class="usuario__responder">Responder</button>
-                        <button class="usuario__eliminar">Eliminiar registro</button>
-                    </div>
-                    <!-- usuario__acciones -->
-                </div>
-                <!-- ! usuario -->
-                <!-- * Usuario -->
-                <div class="usuario">
-                    <div class="usuario__info">
-                        <div class="usuario__encabezado">
-                            <h3 class="usuario__nombre">sin respuesta</h3>
-                        </div>
-                        <!-- usuario__superior -->
-                        <div class="usuario__parrafos">
-                            <p class="usuario__parrafo">Correo: 
-                                <small class="usuario__datos">sin respuesta</small>
-                            </p>
-                            <p class="usuario__parrafo">Objetivo: 
-                                <small class="usuario__datos">sin respuesta</small>
-                            </p>
-                            <p class="usuario__parrafo">Estado respuesta: 
-                                <small class="usuario__datos">sin respuesta</small>
-                            </p>
-                        </div>
-                        <!-- usuario__parrafos -->
-                    </div>
-                    <!-- usuario__info -->
-                    
-                    <div class="usuario__acciones">
-                        <button class="usuario__responder">Responder</button>
-                        <button class="usuario__eliminar">Eliminiar registro</button>
-                    </div>
-                    <!-- usuario__acciones -->
-                </div>
-                <!-- ! usuario -->
-                <!-- * Usuario -->
-                <div class="usuario">
-                    <div class="usuario__info">
-                        <div class="usuario__encabezado">
-                            <h3 class="usuario__nombre">sin respuesta</h3>
-                        </div>
-                        <!-- usuario__superior -->
-                        <div class="usuario__parrafos">
-                            <p class="usuario__parrafo">Correo: 
-                                <small class="usuario__datos">wilmer11.wh@gmail.com</small>
-                            </p>
-                            <p class="usuario__parrafo">Objetivo: 
-                                <small class="usuario__datos">perder peso</small>
-                            </p>
-                            <p class="usuario__parrafo">Estado respuesta: 
-                                <small class="usuario__datos">sin respuesta</small>
-                            </p>
-                        </div>
-                        <!-- usuario__parrafos -->
-                    </div>
-                    <!-- usuario__info -->
-                    
-                    <div class="usuario__acciones">
-                        <button class="usuario__responder">Responder</button>
-                        <button class="usuario__eliminar">Eliminiar registro</button>
-                    </div>
-                    <!-- usuario__acciones -->
-                </div>
-                <!-- ! usuario -->
-                <!-- * Usuario -->
-                <div class="usuario">
-                    <div class="usuario__info">
-                        <div class="usuario__encabezado">
-                            <h3 class="usuario__nombre">Wilmer Howard Abarca</h3>
-                        </div>
-                        <!-- usuario__superior -->
-                        <div class="usuario__parrafos">
-                            <p class="usuario__parrafo">Correo: 
-                                <small class="usuario__datos">sin respuesta</small>
-                            </p>
-                            <p class="usuario__parrafo">Objetivo: 
-                                <small class="usuario__datos">sin respuesta</small>
-                            </p>
-                            <p class="usuario__parrafo">Estado respuesta: 
-                                <small class="usuario__datos">sin respuesta</small>
-                            </p>
-                        </div>
-                        <!-- usuario__parrafos -->
-                    </div>
-                    <!-- usuario__info -->
-                    
-                    <div class="usuario__acciones">
-                        <button class="usuario__responder">Responder</button>
-                        <button class="usuario__eliminar">Eliminiar registro</button>
-                    </div>
-                    <!-- usuario__acciones -->
-                </div>
-                <!-- ! usuario -->
+                <!-- ? USUARIOS (GENERADOS CON JAVASCRIPT) -->
             </div>
             <!-- envoltura__contenedor -->
         </div>
@@ -162,83 +49,79 @@
             <!-- * Mensaje nutricionista -->
             <div class="envoltura envoltura__nutricionista">
                 <div class="envoltura__superior">
-                    <h2 class="envoltura__titulo">Estás respondiendo a: <small class="envoltura__persona">sin respuesta</small></h2>
+                    <h2 class="envoltura__titulo">Estás respondiendo a: <small class="envoltura__persona" id="nombre">sin respuesta</small></h2>
                 </div>
                 <div class="columna">
                     <div class="usuario__parrafos">
                         <p class="usuario__parrafo">Correo: 
-                            <small class="usuario__datos">sin respuesta</small>
+                            <small class="usuario__datos" id="correo">sin respuesta</small>
                         </p>
                         <!-- usuario__parrafo -->
                         <p class="usuario__parrafo">Objetivo: 
-                            <small class="usuario__datos">sin respuesta</small>
+                            <small class="usuario__datos" id="objetivo">sin respuesta</small>
                         </p>
                         <!-- usuario__parrafo -->
                         <ul class="usuario__parrafo">Medidas del cuerpo (cm): 
                             <li class="usuario__datos">Altura:
-                                <small class="usuario__datos--detalle">00</small>
+                                <small class="usuario__datos--detalle" id="altura">00</small>
                             </li>
                             <!-- usuario__datos -->
                             <li class="usuario__datos">Pectoral:
-                                <small class="usuario__datos--detalle">00</small>
+                                <small class="usuario__datos--detalle" id="pectoral">00</small>
                             </li>
                             <!-- usuario__datos -->
-                            <li class="usuario__datos">Biceps:
-                                <small class="usuario__datos--detalle">00</small>
+                            <li class="usuario__datos" >Biceps:
+                                <small class="usuario__datos--detalle" id="biceps">00</small>
                             </li>
                             <!-- usuario__datos -->
-                            <li class="usuario__datos">Antebrazo:
-                                <small class="usuario__datos--detalle">00</small>
+                            <li class="usuario__datos" >Antebrazo:
+                                <small class="usuario__datos--detalle" id="antebrazo">00</small>
                             </li>
                             <!-- usuario__datos -->
-                            <li class="usuario__datos">Cintura:
-                                <small class="usuario__datos--detalle">00</small>
+                            <li class="usuario__datos" >Cintura:
+                                <small class="usuario__datos--detalle" id="cintura">00</small>
                             </li>
                             <!-- usuario__datos -->
-                            <li class="usuario__datos">Glúteos:
-                                <small class="usuario__datos--detalle">00</small>
+                            <li class="usuario__datos" >Glúteos:
+                                <small class="usuario__datos--detalle" id="gluteos">00</small>
                             </li>
                             <!-- usuario__datos -->
-                            <li class="usuario__datos">Piernas:
-                                <small class="usuario__datos--detalle">00</small>
+                            <li class="usuario__datos" >Piernas:
+                                <small class="usuario__datos--detalle" id="piernas">00</small>
                             </li>
                             <!-- usuario__datos -->
-                            <li class="usuario__datos">Hombros:
-                                <small class="usuario__datos--detalle">00</small>
+                            <li class="usuario__datos" >Hombros:
+                                <small class="usuario__datos--detalle" id="hombros">00</small>
                             </li>
                             <!-- usuario__datos -->
-                            <li class="usuario__datos">Peso (kg):
-                                <small class="usuario__datos--detalle">00</small>
+                            <li class="usuario__datos" >Peso (kg):
+                                <small class="usuario__datos--detalle" id="peso">00</small>
                             </li>
                             <!-- usuario__datos -->
                         </ul>
                         <!-- usuario__parrafo -->
-                        <p class="usuario__parrafo">Objetivo: 
-                            <small class="usuario__datos">sin respuesta</small>
-                        </p>
-                        <!-- usuario__parrafo -->
                         <p class="usuario__parrafo">Tipo de cuerpo: 
-                            <small class="usuario__datos">sin respuesta</small>
+                            <small class="usuario__datos" id="tipoCuerpo">sin respuesta</small>
                         </p>
                         <!-- usuario__parrafo -->
                         <p class="usuario__parrafo">Tipo de trabajo: 
-                            <small class="usuario__datos">sin respuesta</small>
+                            <small class="usuario__datos" id="tipoTrabajo">sin respuesta</small>
                         </p>
                         <!-- usuario__parrafo -->
                         <p class="usuario__parrafo">Frecuencia física: 
-                            <small class="usuario__datos">sin respuesta</small>
+                            <small class="usuario__datos" id="frecuenciaFisica">sin respuesta</small>
                         </p>
                         <!-- usuario__parrafo -->
                         <p class="usuario__parrafo">Adicciones: 
-                            <small class="usuario__datos">sin respuesta</small>
+                            <small class="usuario__datos" id="adiccion">sin respuesta</small>
                         </p>
                         <!-- usuario__parrafo -->
                         <p class="usuario__parrafo">Consumo de agua: 
-                            <small class="usuario__datos">sin respuesta</small>
+                            <small class="usuario__datos" id="consumoAgua">sin respuesta</small>
                         </p>
                         <!-- usuario__parrafo -->
                         <p class="usuario__parrafo">Mensaje adicional: 
-                            <small class="usuario__datos">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati tempore harum neque architecto nisi sed corrupti accusantium nobis a fuga qui quisquam at laudantium amet molestias, magni libero, ab aperiam?</small>
+                            <small class="usuario__datos" id="mensajeAdicional">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati tempore harum neque architecto nisi sed corrupti accusantium nobis a fuga qui quisquam at laudantium amet molestias, magni libero, ab aperiam?</small>
                         </p>
                         <!-- usuario__parrafo -->
                     </div>
@@ -249,6 +132,7 @@
                             <textarea class="mensaje__textarea" placeholder=" "></textarea>
                             <label class="mensaje__label">Escribiendo...</label>
                         </div>
+                        <button class="mensaje__regresar">Regresar</button>
                         <button class="mensaje__enviar">Enviar respuesta</button>
                     </div>
                 </div>

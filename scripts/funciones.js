@@ -20,7 +20,45 @@ function comprobarCamposObjeto (objeto) {
 }
 
 
+async function confimarAlerta () {
+    let estado = false
+    await Swal.fire({
+        title: '¿Estás seguro?',
+        text: "¡No podrás recuperar este registro!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí, eliminar!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+            estado = true
+        }
+      })
+      return estado
+}
+
+
+function mostrarExito (titulo='¡Eliminado!', desc='El registro fue elimidado', estado='success') {
+    Swal.fire(
+        titulo,
+        desc,
+        estado
+    )
+}
+
+function darFormatoCSS (respuesta) {
+    respuesta.forEach(res => {
+        if(res.textContent !== 'sin respuesta') {
+            res.classList.add('respuesta--mostrar')
+        }
+    })
+}
+
 export  {
     cancelarEventosBotones,
     comprobarCamposObjeto,
+    confimarAlerta,
+    mostrarExito,
+    darFormatoCSS
 }

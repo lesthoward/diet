@@ -3,7 +3,7 @@
 @import 'cabecera';
 
 .envoltura {
-    display: block;
+    // display: none;
     background: var(--wrapper-color);
     max-width: 80rem;
     margin: 2.5rem auto;
@@ -110,6 +110,10 @@ li.usuario__datos {
     flex: 1;
 }
 
+.usuario__eliminar {
+    background: var(--text-color);
+}
+
 .usuario__responder {
     background: var(--second-color);
 }
@@ -117,8 +121,6 @@ li.usuario__datos {
 .envoltura__persona {
     color: var(--text-dark-color);
 }
-
-
 
 .mensaje {
     display: flex;
@@ -147,6 +149,7 @@ li.usuario__datos {
     left: 2.5rem;
     transition: all .2s ease;
     user-select: none;
+    pointer-events: none;
 }
 
 .mensaje__textarea:focus + .mensaje__label{
@@ -157,6 +160,8 @@ li.usuario__datos {
     top: -.9rem;
     left: .9rem;
     box-shadow: 0 0 .4rem .3rem #fff;
+    user-select: none;
+    pointer-events: none;
 }
 
 .mensaje__textarea:not(:placeholder-shown) + .mensaje__label{
@@ -167,6 +172,8 @@ li.usuario__datos {
     top: -.9rem;
     left: .9rem;
     box-shadow: 0 0 .4rem .3rem #fff;
+    user-select: none;
+    pointer-events: none;
 }
 .mensaje__enviar {
     @include botonRedondo;
@@ -174,4 +181,18 @@ li.usuario__datos {
     display: inline-block;
     border: none;
     margin-left: auto;
+}
+
+.mensaje__regresar {
+    @include botonRedondo;
+    background: var(--text-color);
+    margin-top: 2rem;
+    display: inline-block;
+    border: none;
+    margin-left: auto;
+}
+
+.respuesta--mostrar {
+    color: var(--text-dark-color);
+    font-weight: bold;
 }

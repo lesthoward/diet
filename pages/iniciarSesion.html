@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Continua tu progreso | NutroDietas</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Formatear estilos -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css'/>
     <!-- Fuentes personalizadas de iconos -->
@@ -15,7 +16,7 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js'></script>
     <!-- Mis estilos y scrips -->
     <link rel="stylesheet" href="../styles/iniciarSesion.css">
-    <script src="../scripts/iniciarSesion.js" defer type="module"></script>
+    <script src="../scripts/pages/iniciarSesion.js" defer type="module"></script>
 </head>
 <body>
     <!-- Cabecera -->
@@ -32,34 +33,36 @@
     </header>
 
 
-    <form action="" class="formulario">
-        <div class="formulario__envoltura">
-            <!-- INICIAR SESIÓN -->
-            <div class="formulario__pasos">
-                <div class="formulario__info">
-                    <h2 class="formulario__titulo">Iniciar sesión</h2>
-                    <p class="formulario__descripcion">Continua el progreso con tu especialista</p>
+    <main class="container">
+        <form action="./perfil.html" class="formulario">
+            <div class="formulario__envoltura">
+                <!-- INICIAR SESIÓN -->
+                <div class="formulario__pasos">
+                    <div class="formulario__info">
+                        <h2 class="formulario__titulo">Iniciar sesión</h2>
+                        <p class="formulario__descripcion">Continua el progreso con tu especialista</p>
+                    </div>
+            
+                    <div class="formulario__campo">
+                        <label class="formulario__label" >Correo</label>
+                        <input class="formulario__input" type="text" id="correo"></input>
+                    </div>
+                    <!-- formulario__campo -->
+                    <div class="formulario__campo">
+                        <label class="formulario__label">Contraseña</label>
+                        <input class="formulario__input" type="password"  id="pass"></input>
+                    </div>
+                    <!-- formulario__campo -->
+                    <div class="formulario__botones">
+                        <button class="formulario__boton formulario__siguiente">Iniciar Sesión</button>
+                    </div>
+                    <!-- formulario__botones -->
                 </div>
-        
-                <div class="formulario__campo">
-                    <label class="formulario__label">Correo</label>
-                    <input class="formulario__input" type="text"></input>
-                </div>
-                <!-- formulario__campo -->
-                <div class="formulario__campo">
-                    <label class="formulario__label">Contraseña</label>
-                    <input class="formulario__input" type="password"></input>
-                </div>
-                <!-- formulario__campo -->
-                <div class="formulario__botones">
-                    <button class="formulario__boton formulario__siguiente">Iniciar Sesión</button>
-                </div>
-                <!-- formulario__botones -->
+                <!-- formulario__pasos -->
             </div>
-            <!-- formulario__pasos -->
-        </div>
-        <!-- formulario__envoltura -->
-    </form>
-    <!-- formulario -->
+            <!-- formulario__envoltura -->
+        </form>
+        <!-- formulario -->
+    </div>
 </body>
 </html>

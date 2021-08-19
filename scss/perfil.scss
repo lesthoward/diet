@@ -133,7 +133,7 @@ header > * {
 }
 
 .envoltura__nutricionista {
-  display: none;
+  display: block;
 }
 
 .envoltura__titulo {
@@ -332,9 +332,4 @@ li.usuario__datos {
 }
 .mensaje__regresar:hover {
   transform: scale(1.05);
-}
-
-.respuesta--mostrar {
-  color: var(--text-dark-color);
-  font-weight: bold;
 }

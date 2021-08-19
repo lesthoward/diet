@@ -93,6 +93,7 @@ header > * {
   position: relative;
   color: var(--text-contrast-color);
 }
+
 .navegacion__link::before {
   background: var(--text-color);
   display: block;
@@ -103,6 +104,7 @@ header > * {
   width: 100%;
   border-radius: 0.5rem;
 }
+
 .navegacion__link::after {
   background: var(--first-color);
   display: block;
@@ -114,6 +116,7 @@ header > * {
   transition: width 0.3s ease;
   border-radius: 0.5rem;
 }
+
 .navegacion__link:hover::after {
   width: 100%;
 }
@@ -133,7 +136,7 @@ header > * {
 }
 
 .envoltura__nutricionista {
-  display: none;
+  display: block;
 }
 
 .envoltura__titulo {
@@ -227,6 +230,7 @@ li.usuario__datos {
   border-radius: 0.3rem;
   flex: 1;
 }
+
 .usuario__acciones > *:hover {
   transform: scale(1.05);
 }
@@ -311,6 +315,7 @@ li.usuario__datos {
   border: none;
   margin-left: auto;
 }
+
 .mensaje__enviar:hover {
   transform: scale(1.05);
 }
@@ -330,11 +335,7 @@ li.usuario__datos {
   border: none;
   margin-left: auto;
 }
+
 .mensaje__regresar:hover {
   transform: scale(1.05);
-}
-
-.respuesta--mostrar {
-  color: var(--text-dark-color);
-  font-weight: bold;
 }

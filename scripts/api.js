@@ -1,11 +1,12 @@
-const url = 'http://localhost:3080/usuarios'
+// const url = 'http://localhost:3000/usuarios'
+const url = 'https://lesthoward-diet.netlify.app/baseDatos/usuarios'
 let abortController = new AbortController()
 
-const obtenerDatos = async () => {
+const obtenerDatos = async (id='') => {
     try {
-        const solicitud = await fetch(url)
+        const solicitud = await fetch(url+'/'+id)
         const data = await solicitud.json()
-        console.log(data);
+        return data
         
     } catch (error) {
         console.log(error);
@@ -27,7 +28,31 @@ const enviarUsuariosJSON = async (usuario) => {
     }
 }
 
+const eliminarUsuariosJSON = async (userId) => {
+    try {
+        await fetch(`${url}/${userId}`, {
+            method: 'DELETE'
+        }) 
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+const actualizarUsuarioJSON = async (usuario, userId) => {
+    try {
+        await fetch(`${url}/${userId}`, {
+            method: 'PATCH',
+            headers:{'Content-Type': 'application/json'},
+            body: JSON.stringify(usuario)
+        }) 
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 export {
     obtenerDatos,
-    enviarUsuariosJSON
+    enviarUsuariosJSON,
+    eliminarUsuariosJSON,
+    actualizarUsuarioJSON
 }
