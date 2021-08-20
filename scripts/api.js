@@ -1,5 +1,4 @@
-// const url = 'http://localhost:3000/usuarios'
-const url = 'https://lesthoward-diet.netlify.app/baseDatos/usuarios'
+const url = 'http://localhost:3000/usuarios'
 let abortController = new AbortController()
 
 const obtenerDatos = async (id='') => {
