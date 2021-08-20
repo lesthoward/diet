@@ -15,7 +15,6 @@ function completarCampos (usuarioEspecifico) {
     const textoArea = document.querySelector('.mensaje__textarea');
     etiquetas.forEach(etiquetaUnica => {
         if(etiquetaUnica.id) {
-            console.log(usuarioEspecifico.id);
             etiquetaUnica.textContent = usuarioEspecifico[etiquetaUnica.id]
         }
     })

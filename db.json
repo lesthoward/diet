@@ -1,0 +1,13 @@
+{
+  "usuarios": [
+    {
+      "coreo": "admin",
+      "pass": "admin",
+      "superUsuario": true
+    },
+    {
+      "coreo": "123",
+      "pass": "123"
+    }
+  ]
+}

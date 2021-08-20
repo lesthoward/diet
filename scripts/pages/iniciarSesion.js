@@ -59,5 +59,6 @@ function comprobarUsuarioBaseDatos (e) {
 
 async function registroUsuariosJSON () {
     usuarios = await obtenerDatos()
+    console.log(usuarios);
 }
 registroUsuariosJSON () 
