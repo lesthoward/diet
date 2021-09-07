@@ -1,5 +1,5 @@
-let abortController = new AbortController()
-const signal = abortController.signal
+// let abortController = new AbortController()
+// const signal = abortController.signal
 const url = 'http://localhost:3000/usuarios'
 
 const obtenerDatos = async (id='') => {
