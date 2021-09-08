@@ -4,7 +4,7 @@
   "description": "Manejo de planes de dietas para lo usuarios registrados por medio de nutricionistas especializados para atender cada solicitud",
   "main": "index.js",
   "scripts": {
-    "test": "gulp sync"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
