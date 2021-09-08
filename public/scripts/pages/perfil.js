@@ -7,6 +7,7 @@ import {obtenerDatos} from '../api.js'
 obtenerUsuarioIndividual ()
 async function obtenerUsuarioIndividual () {
     const datos = await obtenerDatos(userID)
+    console.log(datos);
     completarCampos (datos)
 }
 

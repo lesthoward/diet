@@ -10,10 +10,14 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.27.5",
+    "connect-livereload": "^0.6.1",
     "gulp": "^4.0.2",
     "gulp-sass": "^5.0.0",
     "json-server": "^0.16.3",
+    "livereload": "^0.9.3",
     "sass": "^1.38.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }

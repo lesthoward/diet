@@ -1,12 +1,11 @@
 // let abortController = new AbortController()
 // const signal = abortController.signal
-const url = 'http://localhost:3000/usuarios'
+const url = window.location.origin + '/usuarios'
 
 const obtenerDatos = async (id='') => {
     try {
-        const solicitud = await fetch(url+'/'+id)
+        const solicitud = await fetch(url + `/${id}`)
         const data = await solicitud.json()
-        console.log(data);
         return data
         
     } catch (error) {
@@ -19,8 +18,7 @@ const enviarUsuariosJSON = async (usuario) => {
         await fetch(url, {
             method: 'POST',
             headers:{'Content-Type': 'application/json'},
-            body: JSON.stringify(usuario),
-            signal: signal
+            body: JSON.stringify(usuario)
         })
         
 
@@ -44,13 +42,10 @@ const actualizarUsuarioJSON = async (usuario, userId) => {
         await fetch(`${url}/${userId}`, {
             method: 'PATCH',
             headers:{'Content-Type': 'application/json'},
-            body: JSON.stringify(usuario),
-            signal: signal
+            body: JSON.stringify(usuario)
 
-        }).then((e) => {
-            console.log(e);
         })
-        window.location.href = '/'
+        window.location.href = '/pages/administrarDietas.html'
     } catch (error) {
         console.log(error);
     }

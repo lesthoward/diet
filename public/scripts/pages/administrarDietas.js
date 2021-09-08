@@ -72,7 +72,7 @@ function habilitarDarRespuesta (userId) {
             mensajeNutrologo,
             respuesta: 'completado'
         }
-        actualizarUsuarioJSON(usuarioObj, userId)
+        actualizarUsuarioJSON({...usuarioObj}, userId)
         respuesta = false
         cargarVista()
         mostrarExito('Edición' ,'El registro fue modificado exitosamente')

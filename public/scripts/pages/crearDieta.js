@@ -113,24 +113,25 @@ function funcionalidadSiguiente (btnContinuar=true) {
 }
 
 async function enviarFormulario () {
+    console.log(usuario);
     await enviarUsuariosJSON(usuario)
     window.location.href = '/'
-    // document.querySelector('.formulario__envoltura').innerHTML = `
-    // <div class="formulario__pasos formulario__enviar">
-    //     <div class="formulario__info">
-    //         <h2 class="formulario__titulo">GRACIAS POR ELEGIRNOS.</h2>
-    //         <p class="formulario__descripcion">Uno de nuestros asesores nutricionistas revisará tu caso y te guiará en tu progreso de <strong>${usuario.objetivo}</strong> para que cumplas con tus objetivos</p>
-    //         <p>Notificaremos en tu correo : <strong>${usuario.correo}</strong></p>
-    //     </div>
+    document.querySelector('.formulario__envoltura').innerHTML = `
+    <div class="formulario__pasos formulario__enviar">
+        <div class="formulario__info">
+            <h2 class="formulario__titulo">GRACIAS POR ELEGIRNOS.</h2>
+            <p class="formulario__descripcion">Uno de nuestros asesores nutricionistas revisará tu caso y te guiará en tu progreso de <strong>${usuario.objetivo}</strong> para que cumplas con tus objetivos</p>
+            <p>Notificaremos en tu correo : <strong>${usuario.correo}</strong></p>
+        </div>
 
-    //     <div class="notificacion">
-    //         <img class="notificacion__img" src="../images/happy.svg">
-    //     </div>
-    //     <a href="#" class="notificacion__link" target="_blank">Ir a LinkedIn</a>
-    // </div>
-    // `
-    // const mensajeFinal = document.querySelector('.formulario__enviar')
-    // mensajeFinal.style.display = 'block'
+        <div class="notificacion">
+            <img class="notificacion__img" src="../images/happy.svg">
+        </div>
+        <a href="#" class="notificacion__link" target="_blank">Ir a LinkedIn</a>
+    </div>
+    `
+    const mensajeFinal = document.querySelector('.formulario__enviar')
+    mensajeFinal.style.display = 'block'
 }
 
 function mensajeAdicionalFormulario (formularioUnico) {

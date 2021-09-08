@@ -30,8 +30,8 @@ class Documento {
                 <!-- usuario__info -->
                 
                 <div class="usuario__acciones">
-                    <button class="usuario__responder">Responder</button>
-                    <button class="usuario__eliminar">Eliminiar registro</button>
+                    ${elemento.superUsuario ? '' : '<button class="usuario__responder">Responder</button>'}
+                    ${elemento.superUsuario ? '' : '<button class="usuario__eliminar">Eliminiar registro</button>'}
                 </div>
                 <!-- usuario__acciones -->
             `
